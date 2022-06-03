@@ -1,0 +1,21 @@
+body {
+    padding: 64px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: orange;
+
+    transition-property: transform, background;
+    /* transition-property: all; */
+    transition-duration: .3s;
+    /* transition-delay: 1s; */
+    transition-timing-function: ease-out;
+    transition: transform .3s ease-out 1s, background 0.5s;
+}
+
+.box:hover {
+    transform: translate(30px);
+    background: skyblue;
+}
