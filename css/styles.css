@@ -2,7 +2,7 @@ body {
     padding: 64px;
 }
 
-.btn {
+/* .btn {
     padding: 16px 32px;
     background: hsl(200, 100%, 40%);
     coller: #fff;
@@ -14,9 +14,9 @@ body {
 
 .btn:hover {
     background: hsl(200,100%, 45%);
-}
+} */
 
-.box {
+/* .box {
     width: 100px;
     height: 100px;
     background: orange;
@@ -25,9 +25,9 @@ body {
     animation-duration: 2s;
     animation-iteration-count: infinite; */
     animation: move 2s 1 1s;
-}
+} */
 
-@keyframes move {
+/* @keyframes move {
     0% {
         transform: none;
     }
@@ -36,5 +36,26 @@ body {
     }
     100% {
         transform: translateX(300px) rotate(360deg);
+    }
+} */
+
+.loading {
+    width: 40px;
+    height: 40px;
+    border: 8px solid #ccc
+    border-right-color: transparent;
+    border-radius: 50%;
+
+    animation: spin .8s infinite;
+}
+
+@keyframes spin {
+    /* 0% { */
+    from {
+        transform: none;
+    }
+    /* 100% { */
+    to {
+        transform: rotate(360deg);
     }
 }
