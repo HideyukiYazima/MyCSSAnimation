@@ -2,60 +2,45 @@ body {
     padding: 64px;
 }
 
-/* .btn {
-    padding: 16px 32px;
-    background: hsl(200, 100%, 40%);
-    coller: #fff;
+
+.message {
+    width: 300px;
+    padding: 8px 16px;
+    background: #2c2c2c;
+    color: #ddd;
     border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    cursor: pointer;
-    transition: background .3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    animation: popup 2s forwards;
 }
 
-.btn:hover {
-    background: hsl(200,100%, 45%);
-} */
-
-/* .box {
-    width: 100px;
-    height: 100px;
-    background: orange;
-
-    /* animation-name: move;
-    animation-duration: 2s;
-    animation-iteration-count: infinite; */
-    animation: move 2s 1 1s;
-} */
-
-/* @keyframes move {
+@keyframes popup {
     0% {
+        transform: translateY(20px);
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    20%, 80% {
         transform: none;
+        opacity: 1;
     }
-    80% {
-        transform: translateX(200px) rotate(360deg);
-    }
+    /* 80% {
+        transform: none;
+        opacity: 1;
+    } */
     100% {
-        transform: translateX(300px) rotate(360deg);
+        transform: translateY(20px);
+        opacity: 0;
+        pointer-events: none;
     }
-} */
-
-.loading {
-    width: 40px;
-    height: 40px;
-    border: 8px solid #ccc
-    border-right-color: transparent;
-    border-radius: 50%;
-
-    animation: spin .8s infinite;
 }
 
-@keyframes spin {
-    /* 0% { */
-    from {
-        transform: none;
-    }
-    /* 100% { */
-    to {
-        transform: rotate(360deg);
-    }
+button {
+    width: 300px;
+    padding: 8px 16px;
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
 }
